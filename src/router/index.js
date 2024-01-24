@@ -1,16 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '@/views/Home.vue'
+import Template from '@/views/Template.vue'
 import Profil from '@/views/Profil.vue'
 import SearchUser from '@/views/SearchUser.vue'
 import * as Error from '@/views/errors'
 import * as Auth from '@/views/auth'
 import * as Discussion from '@/views/discussions'
 import * as Contact from '@/views/contacts'
+import GetStartedVue from '@/views/GetStarted.vue'
 
 const routes = [
   {
     path: '/',
+    name: 'get-stated',
+    component: GetStartedVue,
+    meta: {title: 'TP Web Avancé Master 1 IFRI réalisé en groupe'}
+  },
+  {
+    path: '/template',
+    name: 'template',
+    component: Template,
+    meta: {title: 'TP Web Avancé Master 1 IFRI réalisé en groupe'}
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home,
     meta: {title: 'Home'}
